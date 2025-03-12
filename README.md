@@ -58,7 +58,7 @@ export type Scopes = AllScopes<typeof tree>;
 
 When we take a string array of scopes from the user that they want, we will want to validate that they are okay. We can do this in one of two ways:
 
-1) **Use the exception based method to handle this:** `validateScopes` will return an `AllScopes<typeof tree>[]` if the users scopes are valid, or throw if not:
+1. **Use the exception based method to handle this:** `validateScopes` will return an `AllScopes<typeof tree>[]` if the users scopes are valid, or throw if not:
     ```ts
     let scopes: AllScopes<typeof tree>[];
     try {
@@ -68,7 +68,7 @@ When we take a string array of scopes from the user that they want, we will want
         // do something with e.message
     }
     ```
-2) **Use the standard schema V1 adapter:** If you have a standard schema V1 compatible validation library, you can use that with it:
+2. **Use the standard schema V1 adapter:** If you have a standard schema V1 compatible validation library, you can use that with it:
     ```ts
     const validator = createScopesStandardSchema(tree, "Invalid scopes");
     // TODO: Use this validator.
@@ -86,6 +86,7 @@ const userHas = hasScope("domain:example.com:edit", userScopes);
 ## Scope Descriptions
 
 For showing users what risks the scopes have, it might be advantageous to grab formatted descriptions out of the tree. This is very easy to do:
+
 ```ts
 // allResolves is the description to use if the fragment is a wildcard.
 const allResolves = "all";
