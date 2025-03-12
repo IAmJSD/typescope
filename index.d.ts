@@ -106,6 +106,7 @@ export function hasScope<T extends ScopeTree<any>>(scope: AllScopes<T>, userScop
  * Gets the description of a scope.
  * @param scopesTree - The scopes tree to get the description from.
  * @param scope - The scope to get the description from.
+ * @param allResolve - The description to use if the fragment is a wildcard.
  * @returns The descriptions of the scope. Can be multiple if the scope is a wildcard.
  */
 export function getScopeDescriptions<T extends ScopeTree<any>>(
