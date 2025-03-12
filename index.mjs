@@ -175,9 +175,9 @@ export function createScopesStandardSchema(scopesTree, message = "Invalid scopes
                 try {
                     value = validateScopes(scopesTree, value);
                     return { value };
-                } catch (e) {
+                } catch {
                     return {
-                        issues: [{ message: e.message }],
+                        issues: [{ message }],
                     };
                 }
             },
