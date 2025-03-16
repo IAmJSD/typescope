@@ -1,12 +1,9 @@
 {
     "name": "typescope",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A library for validating and checking scopes",
     "main": "index.mjs",
     "type": "module",
-    "exports": {
-        ".": "./index.mjs"
-    },
     "types": "index.d.ts",
     "dependencies": {
         "@standard-schema/spec": "^1.0.0"
